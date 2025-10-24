@@ -53,12 +53,12 @@
         if (charIndex < lines[lineIndex].length) {
           textElement.textContent += lines[lineIndex][charIndex];
           charIndex++;
-          setTimeout(type, 125);
+          setTimeout(type, 40);
         } else {
           textElement.textContent += '\n';
           lineIndex++;
           charIndex = 0;
-          setTimeout(type, 125);
+          setTimeout(type, 40);
         }
       }
     }
@@ -68,4 +68,5 @@
 </body>
 
 </html>
+
 
