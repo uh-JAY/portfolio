@@ -62,7 +62,7 @@ I enjoy solving problems through **data analysis, visualization, predictive mode
 
 ---
 
-# 🎓 Relevant Coursework – Master’s in Business Analytics  
+# 🎓 Coursework
 *Webster University*
 
 ## 📊 Analytics & Machine Learning
@@ -123,17 +123,8 @@ I enjoy solving problems through **data analysis, visualization, predictive mode
 
 ---
 
-# 📬 Connect With Me
-
-💼 LinkedIn  
-https://www.linkedin.com/in/analyst-ajay/
-
-💻 GitHub  
-https://github.com/uh-JAY
-
----
-
 ⭐ Always open to collaborating on **data analytics, business intelligence, and data-driven projects**.
+
 ## 📂 Featured Files
 
 ### 1️⃣ Final Project Analysis
@@ -157,11 +148,16 @@ I’m passionate about:
 ---
 
 ## 🔗 Connect with Me
-📧 **Email:** ajaylakkuntla21@gmail.com  
-🌐 **Portfolio:** [https://uh-jay.github.io/portfolio/](https://uh-jay.github.io/portfolio/)  
-💼 **LinkedIn:** [www.linkedin.com/in/ahjay-da](www.linkedin.com/in/ahjay-da)
-🐙 **GitHub:** [https://github.com/uh-JAY](https://github.com/uh-JAY)
 
----
+📧 **Email:** ajaylakkuntla21@gmail.com  
+
+🌐 **Portfolio:**  
+https://uh-jay.github.io/portfolio/
+
+💼 **LinkedIn:**  
+https://www.linkedin.com/in/analyst-ajay/
+
+🐙 **GitHub:**  
+https://github.com/uh-JAY
 
 > “Data tells stories — my goal is to listen, translate, and transform them into business value.”
