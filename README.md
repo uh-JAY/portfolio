@@ -1,7 +1,6 @@
-# 💼 Ajay Lakkuntla — Data & Business Analytics Portfolio
+# 💼 Ajay Lakkuntla — Data & Business Analytics
 
-### 🎓 Master's in Business Analytics | Webster University, St. Louis  
-### 📍 From Telangana, India | Passionate about turning data into insights  
+### 🎓 Master's in Business Analytics | Webster University, St. Louis    
 
 Welcome to my portfolio!  
 This repository showcases some of the key projects and final reports I completed during my studies and hands-on experience in analytics and business process integration.
