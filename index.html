@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sai Kishor Survi | Business Data Analyst Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: "Courier New", Courier, monospace;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    #portfolio-screen {
+      width: 100vw;
+      min-height: 100vh;
+      padding: clamp(24px, 5vw, 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 35%),
+        #000;
+    }
+
+    #terminal {
+      width: min(1100px, 100%);
+      min-height: 70vh;
+      padding: clamp(22px, 4vw, 50px);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.035);
+      box-shadow: 0 0 45px rgba(255, 255, 255, 0.08);
+      white-space: pre-wrap;
+      line-height: 1.62;
+      font-size: clamp(15px, 1.7vw, 22px);
+      letter-spacing: 0.2px;
+    }
+
+    #text {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 11px;
+      height: 1.15em;
+      margin-left: 4px;
+      background-color: #fff;
+      vertical-align: -0.18em;
+      animation: blink 0.85s steps(1) infinite;
+    }
+
+    #enter-message {
+      position: fixed;
+      right: 22px;
+      bottom: 18px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 13px;
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 650px) {
+      #terminal {
+        min-height: 82vh;
+        border-radius: 12px;
+      }
+
+      #enter-message {
+        left: 18px;
+        right: 18px;
+        text-align: center;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main id="portfolio-screen" title="Click anywhere to view fullscreen">
+    <section id="terminal" aria-label="Portfolio terminal">
+      <span id="text"></span><span class="cursor"></span>
+    </section>
+  </main>
+
+  <div id="enter-message">CLICK ANYWHERE TO ENTER FULL SCREEN</div>
+
+  <script>
+    const lines = [
+      "Sai Kishor Survi",
+      "Business Data Analyst | Data Automation | BI & Reporting",
+      "",
+      "About Me:",
+      "I help business teams turn raw data into clear insights, automated workflows, and better decisions.",
+      "I bring 4+ years of experience across finance, marketing, customer, revenue, and operations analytics.",
+      "",
+      "Core Skills:",
+      "SQL | Python | BigQuery | SAP / ERP | NetSuite | HubSpot CRM",
+      "Power BI | Tableau | AWS S3 | Redshift | ETL Automation | Data Validation | Testing",
+      "",
+      "What I Work On:",
+      "• Building dashboards, KPI reports, and business scorecards",
+      "• Automating manual reporting and data workflows",
+      "• Cleaning, validating, and transforming business data",
+      "• Supporting ERP, CRM, finance, customer, and operations analytics",
+      "• Partnering with stakeholders to understand requirements and improve decisions",
+      "",
+      "Project Focus:",
+      "Business Intelligence | Data Quality | Process Improvement | Reporting Automation | Analytics Solutions",
+      "",
+      "Tools & Platforms:",
+      "SAP | NetSuite | HubSpot | SQL | Python | Power BI | Tableau | BigQuery | AWS",
+      "",
+      "Portfolio Goal:",
+      "To create simple, useful, and automated data solutions that improve business workflows and decision-making.",
+      "",
+      "Email: survikishor@gmail.com",
+      "GitHub / Portfolio: Add your link here",
+      "",
+      "Let's connect and build smarter data solutions."
+    ];
+
+    const textElement = document.getElementById("text");
+    const enterMessage = document.getElementById("enter-message");
+
+    let lineIndex = 0;
+    let charIndex = 0;
+    let typingStarted = false;
+
+    function openFullScreen() {
+      const page = document.documentElement;
+
+      if (!document.fullscreenElement && page.requestFullscreen) {
+        page.requestFullscreen().catch(() => {});
+      }
+
+      enterMessage.style.display = "none";
+
+      if (!typingStarted) {
+        typingStarted = true;
+        typeText();
+      }
+    }
+
+    function typeText() {
+      if (lineIndex < lines.length) {
+        if (charIndex < lines[lineIndex].length) {
+          textElement.textContent += lines[lineIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeText, 28);
+        } else {
+          textElement.textContent += "\n";
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(typeText, 120);
+        }
+      }
+    }
+
+    document.addEventListener("click", openFullScreen);
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Enter" || event.key === " ") {
+        openFullScreen();
+      }
+    });
+  </script>
+</body>
+</html>
