@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajay Portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00FF00;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    #terminal {
+      white-space: pre-wrap;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      background-color: #00FF00;
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"><span id="text"></span><span class="cursor"></span></div>
+
+  <script>
+    const lines = [
+      "Ajay",
+"Business Analyst | Data Analyst",
+"Master's in Business Analytics | Webster University, St. Louis",
+"",
+"I specialize in turning complex business problems into clear, data-driven solutions.",
+"With 4+ years of experience, I have worked across analytics, reporting, CRM, ERP, e-commerce, and cloud data platforms.",
+"",
+"CURRENT ROLE | Business Analyst at DraftKings Inc.",
+"I work with business and data teams to analyze player engagement, betting trends, product performance, and customer behavior.",
+"I build SQL-based analysis, Tableau dashboards, Power BI reports, and Looker dashboards to support business decisions.",
+"I use Python, Scikit-learn, and statistical methods for churn forecasting, A/B testing, and customer retention insights.",
+"I support data quality, reporting automation, ETL workflows, and large-scale analytics using AWS S3, Redshift, SQL, and Python.",
+"",
+"PREVIOUS ROLE | Data Analyst at Hover",
+"I worked on property measurement data, 3D model analytics, scan accuracy, and operational performance reporting.",
+"I used BigQuery, SQL, Python, Pandas, Tableau, Looker, and AWS Redshift to clean, transform, analyze, and visualize large datasets.",
+"I supported Salesforce Sales Cloud, ERP data flow mapping, Shopify Plus enhancements, and marketing data validation.",
+"I also helped validate AI model performance for automated property feature recognition workflows.",
+"",
+"TECHNICAL STRENGTHS",
+"Data Analysis: SQL, Python, Pandas, NumPy, Scikit-learn",
+"Business Intelligence: Tableau, Power BI, Looker",
+"Cloud & Data Warehousing: BigQuery, AWS S3, AWS Redshift, AWS Lambda",
+"Data Engineering: Apache Airflow, dbt, ETL pipelines, data validation",
+"Business Platforms: SAP, Salesforce, NetSuite, Shopify Plus, Jira, GitHub",
+"",
+"WHAT I BRING",
+"I bridge the gap between business teams and technical teams.",
+"I convert raw data into dashboards, reports, insights, and business recommendations.",
+"I improve workflows, automate reporting, validate data, and support better decision-making.",
+"My goal is to help businesses move faster with accurate data and clear insights.",
+"",
+"Open to Senior Data Analyst, Business Analyst, BI Analyst, and Data Analytics roles.",
+"Let's connect!"
+    ];
+
+    const textElement = document.getElementById("text");
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (lineIndex < lines.length) {
+        if (charIndex < lines[lineIndex].length) {
+          textElement.textContent += lines[lineIndex][charIndex];
+          charIndex++;
+          setTimeout(type, 40);
+        } else {
+          textElement.textContent += '\n';
+          lineIndex++;
+          charIndex = 0;
+          setTimeout(type, 40);
+        }
+      }
+    }
+
+    type();
+  </script>
+</body>
+
+</html>
+
+
